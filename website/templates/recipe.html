@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="title">
+        <h1>{{title}}</h1>
+        <p class="lead">{{description}}</p>
+    </div>
+
+    <div class="recipe-body">
+    <table style="width: 100%; border-collapse: collapse; border-style: hidden;" >
+        <tbody>
+        <tr>
+        <td style="width: 50%; text-align: left; vertical-align: top;">
+        <h3>Ingredients<strong>:</strong></h3>
+        <ul>
+            {% for ingredient in ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+        </ul>
+        </td>
+        <td style="width: 50%; text-align: right; vertical-align: top;"><img src={{photo}} alt="jl" width="410" height="307" ></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3 style="text-align: left">Instructions<strong>:</strong></h3>
+    <p style="text-align: left">
+        <br>
+        {{instructions | safe}}
+        <br>
+        {% for tag in recipe_tags %}
+        <a href="/tag/{{tag}}">#{{tag}}</a>
+        {% endfor %}
+    </p>
+    </div>
+{% endblock %}

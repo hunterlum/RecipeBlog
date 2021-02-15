@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+recipes
+__pycache__
+venv
+zappa_settings.json
+.DS_Store
+bucket_info.json

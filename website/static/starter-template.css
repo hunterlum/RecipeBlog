@@ -1,0 +1,45 @@
+body {
+  padding-top: 5rem;
+}
+
+/*rgb(0, 141, 30)!important*/
+.background-primary{
+  background-color:#FAF0E6
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: rgb(80, 52, 1);
+}
+.title {
+  padding: 3rem 1.5rem;
+  font-size: large;
+  text-align: center;
+  color: rgb(139, 69, 19);
+}
+
+.recipe-body{
+  padding: 3rem 1.5rem;
+  font-size: large;
+  color: rgb(153, 147, 60);
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(153, 147, 60);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(153, 147, 60);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(153, 147, 60);
+}
+
+/* selected link */
+a:active {
+  color: rgb(153, 147, 60);
+}
