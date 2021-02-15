@@ -10,7 +10,7 @@
     <table style="width: 100%; border-collapse: collapse; border-style: hidden;" >
         <tbody>
         <tr>
-        <td style="width: 50%; text-align: left; vertical-align: top;">
+        <td style="width: 35%; text-align: left; vertical-align: top;">
         <h3>Ingredients<strong>:</strong></h3>
         <ul>
             {% for ingredient in ingredients %}
@@ -18,19 +18,22 @@
             {% endfor %}
         </ul>
         </td>
-        <td style="width: 50%; text-align: right; vertical-align: top;"><img src={{photo}} alt="jl" width="410" height="307" ></td>
+        <td style="width: 65%; text-align: right; vertical-align: top;">
+            <div class="img">
+                <img style="object-fit: contain" src={{photo}} alt="jl">
+            </div>
+        </td>
         </tr>
         </tbody>
     </table>
 
     <h3 style="text-align: left">Instructions<strong>:</strong></h3>
-    <p style="text-align: left">
-        <br>
-        {{instructions | safe}}
-        <br>
-        {% for tag in recipe_tags %}
-        <a href="/tag/{{tag}}">#{{tag}}</a>
-        {% endfor %}
-    </p>
+    <br>
+    {{instructions | safe}}
+    <br>
+    {% for tag in recipe_tags %}
+    <a href="/tag/{{tag}}">#{{tag}}</a>
+    {% endfor %}
+
     </div>
 {% endblock %}

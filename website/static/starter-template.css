@@ -2,7 +2,11 @@ body {
   padding-top: 5rem;
 }
 
-/*rgb(0, 141, 30)!important*/
+img {
+  max-width: 600px;
+  max-height: 500px;
+}
+
 .background-primary{
   background-color:#FAF0E6
 }
