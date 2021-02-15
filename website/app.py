@@ -11,6 +11,7 @@ rm = RecipeManager(bucket = bucket_info['s3_bucket'],recipes_folder = bucket_inf
 @app.route('/')
 def main():
     #rm.update_manager()
+    print('hello world')
     return render_template('index.html',tags=rm.tags)
 
 @app.route('/update')

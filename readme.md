@@ -3,6 +3,9 @@
 ## Introduction
 Food blog using [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/download/). This was a project I created so that I can document my favorite recipes and recreate them in the future. These recipes are organized by "genres" that describe the dish so that recipes and be explored depending on a certain mood.
 
+## Overview
+The Recipe Blog is a flask web app hosted serverlessly using AWS. The web app uses a custom class called RecipeManager which interacts with an S3 bucket. This bucket acts as the database and contains all the recipe data. Using RecipeManager, the web app retrieves the information it needs to populate web pages and list the genres in the nav bar dropdown menu by parsing the recipes in S3. Below is a quick architecure overview of the app as well as configuration instructions.
+
 ## Architecture
 This site can be hosted serverlessly using the following AWS Services:
 1. Route53
@@ -12,8 +15,10 @@ This site can be hosted serverlessly using the following AWS Services:
     * REST API
     * Custom Domain Name
 
+![RecipeBlog](RecipeBlog.png)<br>
+
 Route53 and Custom Domain Name are optional. Their only purpose is to point a custom domain to the REST API for an easier reference. The flask site is hosted in S3 which is invoked by the API Gateway. S3 is used to store recipes.
-### Setup/Deployment
+## Setup/Deployment
 1. Setup S3
     * Create a public S3 bucket
     * The bucket should contain two folders
